@@ -1,5 +1,10 @@
 let myCapture;
 
+let flower;
+
+function preload() {}
+  flower = loadImage('kittens/flower.jpeg');
+
 function setup() {
   createCanvas(320, 240);
   canvas.parent("sketch");
@@ -22,17 +27,19 @@ function draw() {
   for(let y = 0; y < height; y+=stepSize) {
     for(let x = 0; x < width; x+=stepSize) {
       const i = y * width + x;
-      const darkness = (255 - myCapture.pixels[i * 4]) / 255;
-      const radius = stepSize * darkness;
+      //const darkness = (255 - myCapture.pixels[i * 4]) / 255;
+      //const radius = stepSize * darkness;
       
       push();
         scale(-1, 1);
         translate(width, 0);
-        rect(x, y, radius, radius);
+        image(flower, x, y);
+        //rect(x, y, radius, radius);
       pop();
       
-      fill(random(255), random(255), random(255));
-      rect(x, y, radius, random(1,30));
+      //fill(random(255), random(255), random(255));
+      image(flower, x, y);
+      //rect(x, y, radius, random(1,30));
     }
   }
 }
