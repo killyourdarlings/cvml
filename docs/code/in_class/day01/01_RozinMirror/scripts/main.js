@@ -9,7 +9,7 @@ function setup() {
   createCanvas(320, 240);
   canvas.parent("sketch");
   myCapture = createCapture(VIDEO);
-  //myCapture.hide();
+  myCapture.hide();
   fill(255, 0, 0);
   noStroke();
 }
