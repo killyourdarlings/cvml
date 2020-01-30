@@ -3,7 +3,7 @@ let myCapture;
 let flower;
 
 function preload() {}
-  flower = loadImage('kittens/flower.jpeg');
+  flower = loadImage('kittens/flower.gif');
 
 function setup() {
   createCanvas(320, 240);
